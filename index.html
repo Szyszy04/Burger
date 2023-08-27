@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>WF</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+
+<section class="menu" id="menu">
+    <ul class="navigation active">
+        <li><a href="#menu">Home</a></li>
+        <li><a href="#food">Food</a></li>
+        <li><a href="#news">News</a></li>
+        <span class="toggleMenu" onclick="activeMenu()"><img src="logo.png" style="height: 50px;border-radius: 30%;"></span>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#menu">Search</a></li>
+    </ul>
+</section>
+    <section class="burger-composition">
+        <div class="burger-text">
+            <h1>Hamburger composition</h1>
+            <p>A hamburger, or simply burger, is a food consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or chilis; condiments such as ketchup, mustard, mayonnaise, relish, or a "special sauce", often a variation of Thousand Island dressing; and are frequently placed on sesame seed buns</p>
+            <a href="#" onclick="return false;">Read more</a>
+        </div>
+        <div class="burger-img">
+            <img src="burger.png" onmouseover="this.src='burger-fly.png'" onmouseout="this.src='burger.png'">
+        </div>
+    </section>
+    <section class="burger-list" id="food">
+        <h1>Recommended burgers</h1>
+      <div class="burger-content">
+        <div><img src="burger-drwal.png"><a href="#">Check Drwal</a></div>
+        <div><img src="burger-whopper.png"><a href="#">Check Whopper</a></div>
+        <div><img src="burger-grander.png"><a href="#">Check Grander</a></div>
+      </div>
+    </section>
+    <section class="burger-recipes" id="recipes">
+        <div class="recipes-img"></div>
+        <div class="recipes-text">
+            <h2>Best burger recipes</h2>
+            <a href="#" onclick="return false;" class="clickIt">Click it</a>
+        </div>
+<div class="recipes-content">
+    <div class="recipes-text2">
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Preheat a grill or a skillet over medium-high heat.</li>
+                <li>In a large bowl, mix the ground beef with salt and pepper to taste. Divide the mixture into 4 equal portions and form each portion into a patty, making an indentation in the center with your thumb to prevent it from puffing up while cooking.</li>
+                <li>Cook the patties for 3-4 minutes per side for medium-rare, or longer if you prefer your burger more well-done. Place a slice of cheese on top of each patty during the last minute of cooking and allow it to melt.</li>
+                <li>While the patties are cooking, mix the ketchup, mayonnaise, yellow mustard, and garlic powder in a small bowl to make the burger sauce.</li>
+                <li>Toast the burger buns on the grill or in the skillet for a minute or two until they are lightly browned.</li>
+                <li>To assemble the burger, spread the burger sauce on the bottom and top buns. Add lettuce, tomato slices, and pickles (if using) on the bottom bun. Place the cooked patty with melted cheese on top of the toppings, then add the top bun.</li>
+                <li>Serve the burgers immediately with your favorite sides, such as french fries or onion rings.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+    </section>
+    
+    <div class="funfact-text">
+    <h1>Hamburger Fun Fact</h1>
+    </div>
+
+    <section class="burger-funfact" id="news">
+        <div class="funfact-sector">
+            <div class="funfact-content1">
+                <img src="burger-funfact1.png">
+                <p><b>One of the first restaurants to offer a hamburger on a regular basis was White Castle in 1921.</b></p>
+            </div>
+
+            <div class="funfact-content2 hide">
+                <img src="burger-funfact2.png">
+                <p><b>The record holder for eating hamburgers in time is Japanese Takeru Kobayashi, who set a world record by eating 93 hamburgers in 8 minutes.</b></p>
+            </div>
+
+            <div class="funfact-content3 hide">
+                <img src="burger-funfact3.png">
+                <p><b>There are reports that 14 billion burgers are consumed by Americans each year, which averages to about three burgers a week.</b></p>
+            </div>
+        <div class="funfact-section">
+            <div class="button1 focus"></div>
+            <div class="button2"></div>
+            <div class="button3"></div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footerIcon">
+                <a href="https://github.com/Szyszy04" target=”_blank”><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/szyszy__/" target=”_blank”><i class="fa-brands fa-instagram"></i></a>
+                <a onclick="copyEmail()"><i class="fa-regular fa-envelope"></i></a>
+                <a onclick="copyDC()"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <div class="foterNav">
+                <ul>
+                    <li><a href="#menu">Home</a></li>
+                    <li><a href="#food">Food</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Designed by <span class="designer">Szyszy</span></p>
+        </div>
+    </footer>
+<script>
+$(document).ready(function(){
+    $('.clickIt').click(function(){
+        if($('.burger-recipes').css('left') == '0px'){
+            $('.burger-recipes').animate({left: '-72%'});
+       }else{
+        $('.burger-recipes').animate({left: '0px'});
+        };
+    });
+});
+
+$(".button1").click(function(){
+            $(".funfact-content3").addClass("hide");
+            $(".funfact-content2").addClass("hide");
+            $(".funfact-content1").removeClass("hide");
+            
+            $(".button1").addClass("focus");
+            $(".button2").removeClass("focus");
+            $(".button3").removeClass("focus");
+          });
+          $(".button2").click(function(){
+            $(".funfact-content3").addClass("hide");
+            $(".funfact-content1").addClass("hide");
+            $(".funfact-content2").removeClass("hide");
+
+            $(".button2").addClass("focus");
+            $(".button1").removeClass("focus");
+            $(".button3").removeClass("focus");
+          });
+          $(".button3").click(function(){
+            $(".funfact-content1").addClass("hide");
+            $(".funfact-content2").addClass("hide");
+            $(".funfact-content3").removeClass("hide");
+
+            $(".button3").addClass("focus");
+            $(".button2").removeClass("focus");
+            $(".button1").removeClass("focus");
+          });
+
+function copyEmail() {
+  alert("Email: Wiktor.Fedorowicz3@onet.pl");
+}
+function copyDC() {
+   alert("Discord: szyszy_");
+}
+
+function activeMenu(){
+            $('.navigation').toggleClass('active')
+        }
+
+function counter(){
+    var count = setInterval(function(){
+        var c = parseInt($('.counter').text());
+        $('.counter').text((++c).toString());
+        if (c == 100){
+            clearInterval(count);
+            $('.counter').addClass('hide')
+            $('.preloader').addClass('activec')
+        }
+    },30)
+}
+counter()
+</script>
+</body>
+</html>

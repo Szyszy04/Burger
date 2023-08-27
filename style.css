@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    height: 2560px;
+}
+body{
+    background-image: url(tlo3.jpg);
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    background-color: black;
+    background-repeat: no-repeat;
+}
+.preloader{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: darkred;
+    z-index: 1000000;
+}
+.preloader:before{
+    content: 'Loading';
+    position: absolute;
+    font-size: 18em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .3);
+}
+.counter{
+    position: relative;
+    color: wheat;
+    font-size: 16em;
+    font-weight: 700;
+    z-index: 1;
+}
+.counter:after{
+    content: '%';
+    font-size: 0.5em;
+}
+.hide{
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
+}
+.preloader.activec{
+    transform: translateY(-100vh);
+    transition: ease-in-out 2s;
+    transition-delay: 1s;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+.navigation{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 25px 50px rgb(0 0 0 / 20%);
+    background: transparent;
+    backdrop-filter: blur(4px);
+    z-index: 5;
+}
+.navigation.active{
+    width: 800px;
+}
+.navigation .toggleMenu{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 25px 50px rgb(0 0 0 / 20%);
+    background: transparent;
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation.active .toggleMenu{
+    transition-delay: 0s;
+    transform: translateY(70px);
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 25px 50px rgb(0 0 0 / 20%);
+    background: transparent;
+    backdrop-filter: blur(4px);
+}
+.navigation li{
+    list-style: none;
+    transition: 0.5s;
+    transform: scale(0);
+}
+.navigation.active li{
+    transition-delay: 0.75s;
+    display: flex;
+    transform: scale(1);
+}
+.navigation li a{
+    text-decoration: none;
+    color: wheat;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.navigation li a:hover{
+    background: darkred;
+}
+.burger-composition{
+    width: 100%;
+    top: 250px;
+    position: absolute;
+    display: flex;
+    height: 350px;
+    align-items: center;
+    box-shadow: 0 25px 50px rgb(0 0 0 / 20%);
+    background: transparent;
+    backdrop-filter: blur(4px);
+}
+.burger-text{
+    width: 30%;
+    height: 100%;
+    color: #f5deb3;
+    background: darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.burger-text h3{
+    padding: 10px;
+    padding-top: 30px;
+}
+.burger-text p{
+    padding: 10px;
+    font-size: 14px;
+}
+.burger-text a{
+    text-decoration: none;
+    color: darkred;  
+    padding: 10px; 
+    background: wheat;
+    position: absolute;
+    bottom: -10px;
+}
+.burger-text a:hover{
+    filter: brightness(120%);
+}
+.burger-img{
+    width: 70%;
+    right: 0;
+    text-align: center;
+}
+.burger-img img{
+    height: 200px;
+}
+.burger-img img:hover{
+    height: 650px;
+    transition: 0.3s;
+}
+.burger-list{
+    width: 100%;
+    position: absolute;
+    top: 650px; 
+}
+.burger-list h1{
+    color: wheat;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 50px;
+    font-size: 40px;
+}
+.burger-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+.burger-content div{
+    display: grid;
+    justify-items: center;
+}
+.burger-content img{
+    height: 190px;
+    padding: 8px;
+    background: transparent;
+    backdrop-filter: blur(7px);
+    border: 2px solid wheat;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+.burger-content img:hover{
+    transform: scale(1.3);
+}
+.burger-content a{
+    text-decoration: none;
+    color: wheat;
+    background: darkred;
+    padding: 12px;
+    top: 94%;
+    position: absolute;
+}
+.burger-content a:hover{
+    filter: brightness(120%);
+}
+.burger-recipes{
+    position: absolute;
+    top: 1100px;
+    left: 0px;
+    height: 550px;
+    width: 172%;
+    box-shadow: 0 25px 50px rgb(0 0 0 / 20%);
+    background: transparent;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+}
+.burger-recipes .recipes-img{
+    background-image: url(burger-przepis2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 41%;
+    height: 75%;
+}
+.recipes-text{
+    text-align: center;
+    right: 0;
+    position: absolute;
+    display: flex;
+    width: 18%;
+    height: 100%;
+    left: 41%;
+    background: darkred;
+    color: wheat;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: right 0.4s;
+}
+.recipes-text h2{
+    font-size: 28px;
+    background: wheat;
+    color: darkred;
+}
+.recipes-text a{
+    background: wheat;
+    color: darkred;
+    text-decoration: none;
+    font-size: 35px;
+}
+.recipes-text a:hover{
+    filter: brightness(120%);
+}
+.recipes-content{
+    width: 41%;
+    height: 100%;
+    right: 0%;
+    position: absolute;
+    color: wheat;
+    display: flex;
+    align-items: center;    
+}
+.recipes-text2{
+    width: 92%;
+    height: 89%;
+    right: 4%;
+    position: absolute;
+    background-color: darkred;
+}
+.recipes-text2:before{
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(45deg, wheat, darkred, darkred, wheat);
+    box-shadow: 0 0 0 20px darkred;
+    z-index: -1;
+}
+.instructions{
+    padding: 28px;
+    font-size: 16px;
+    width: auto;
+    height: 100%;
+    display: grid;
+    align-content: stretch;
+}
+.instructions h2{
+    font-size: 35px;
+}
+.instructions ol{
+    font-size: 18px;
+}
+.funfact-text{
+    position: absolute;
+    top: 1730px;
+    width: 100%;
+}
+.funfact-text h1{
+    color: wheat;
+    text-align: center;
+    font-size: 50px;
+}
+.burger-funfact{
+    height: 580px;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 25px 50px rgb(0 0 0 / 20%);
+    align-items: center;
+    display: grid;
+    justify-items: center;
+    top: 1810px;
+    position: absolute;
+}
+.funfact-sector{
+    background-color: darkred;
+    height: 500px;
+    width: 90%;
+    border-radius: 34px;
+}
+.funfact-content1, .funfact-content2, .funfact-content3{
+    display: flex;
+    text-align: center;
+    height: 90%;
+    align-items: center;
+}
+.funfact-content1 img{
+    height: 420px;
+    width: 540px;
+    padding-left: 15px;
+}
+.funfact-content1 p,.funfact-content2 p,.funfact-content3 p{
+    font-size: 40px;
+    color: wheat;
+}
+.funfact-content1.hide{
+    display: none;
+}
+.funfact-content2 img{
+    height: 350px;
+    width: 500px;
+    padding-left: 15px;
+}
+.funfact-content2.hide{
+    display: none;
+}
+.funfact-content3 img{
+    height: 418px;
+    width: 418px;
+    padding-left: 15px;
+}
+.funfact-content3.hide{
+    display: none;
+}
+.funfact-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+.button1, .button2, .button3{
+    height: 20px;
+    border: 2px solid darkred;
+    width: 20px;
+    background-color: wheat;
+    border-radius: 70%;
+}
+.button1.focus{
+    background-color: darkred;
+    border: 3px solid wheat;
+    height: 18px;
+    width: 18px;
+}
+.button2.focus{
+    background-color: darkred;
+    border: 3px solid wheat;
+    height: 18px;
+    width: 18px;
+}
+.button3.focus{
+    background-color: darkred;
+    border: 3px solid wheat;
+    height: 18px;
+    width: 18px;
+}
+
+footer{
+    background-color: darkred;
+    background-color: darkred;
+    top: 2500px;
+    position: absolute;
+    width: 100%;
+}
+.footer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.footerIcon{
+    display: flex;
+    justify-content: center;
+}
+.footerIcon a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: wheat;
+    margin: 10px;
+    border-radius: 50%;
+}
+.footerIcon a i{
+    font-size: 2em;
+    color: darkred;
+    opacity: 0.9;
+}
+.footerIcon a:hover{
+    background-color: darkred;
+    transition: 0.5s;
+}
+.footerIcon a:hover i{
+    color: wheat;
+    transition: 0.5s;
+}
+.foterNav{
+    margin: 30px 0;
+}
+.foterNav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.foterNav ul li a{
+    color: wheat;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.foterNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #660b0b;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: wheat;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
